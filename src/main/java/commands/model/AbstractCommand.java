@@ -104,11 +104,11 @@ public abstract class AbstractCommand implements Command {
     }
 
     /**
-     * Retourn true si l'utilisateur a les droits nécessaires, false le cas échéant
+     * Retourne true si l'utilisateur a les droits nécessaires, false le cas échéant
      * @param message Message reçu
      * @return true si l'utilisateur a les droits nécessaires, false le cas échéant
      */
-    protected boolean isUserHasEnoughRights(IMessage message) {
+    protected boolean isUserHasEnoughRights(IMessage message){
         if (! message.getChannel().isPrivate())
             return message.getAuthor().getLongID() == Constants.authorId
                     || message.getAuthor().getLongID() == Constants.authorId2

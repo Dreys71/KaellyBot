@@ -114,7 +114,8 @@ public class LanguageCommand extends AbstractCommand {
         st.setLength(st.length() - 2);
         st.append(").");
 
-        return "**" + prefixe + name + "** " + Translator.getLabel(lg, "lang.help") + st.toString();
+        return "**" + prefixe + name + "** " + Translator.getLabel(lg, "lang.help.1") + st.toString() + " "
+                + Translator.getLabel(lg, "lang.help.2");
     }
 
     @Override
