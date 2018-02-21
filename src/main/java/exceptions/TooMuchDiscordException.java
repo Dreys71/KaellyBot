@@ -44,7 +44,7 @@ public class TooMuchDiscordException implements DiscordException {
             List<Object> objects = (List<Object>) arguments[0];
             for (Object object : objects)
                 if (isTranslatable)
-                    st.append(Translator.getLabel(lg, object.toString())).append(", ");
+                    st.append(Translator.getLabel(lg, object.toString()).replace("{0}", "")).append(", ");
                 else
                     st.append(object.toString()).append(", ");
             st.delete(st.length() - 2, st.length()).append(".");
