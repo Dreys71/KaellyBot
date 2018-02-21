@@ -18,12 +18,15 @@ public class TrackFinishListener {
     public void onTrackFinish(TrackFinishEvent event) {
         try {
             IGuild guild = event.getPlayer().getGuild();
-            if (!event.getNewTrack().isPresent())
+
+            if (! event.getNewTrack().isPresent())
                 ClientConfig.DISCORD().getOurUser()
                         .getVoiceStateForGuild(guild).getChannel().leave();
         } catch (Exception e){
             ClientConfig.setSentryContext(event.getPlayer().getGuild(), null, null, null);
             LOG.error("onTrackFinish", e);
         }
+
+
     }
 }

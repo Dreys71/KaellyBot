@@ -84,7 +84,7 @@ public class SoundCommand extends AbstractCommand {
                         }
                     }
                 }
-            } catch (Exception e) {
+            } catch (Exception e){
                 ClientConfig.setSentryContext(message.getGuild(), message.getAuthor(), message.getChannel(), message);
                 LOG.error("request", e);
             }

@@ -34,7 +34,6 @@ public class StatCommand extends AbstractCommand {
             int totalUser = 0;
             for(IGuild guild : ClientConfig.DISCORD().getGuilds())
                 totalUser += guild.getUsers().size();
-
             String answer = Translator.getLabel(lg, "stat.request")
                     .replace("{guilds.size}", String.valueOf(ClientConfig.DISCORD().getGuilds().size()))
                     .replace("{users.size}", String.valueOf(ClientConfig.DISCORD().getUsers().size()))
